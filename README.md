@@ -1,4 +1,6 @@
-Let's build a hit counter using a [functional domain model](https://pragprog.com/titles/swdddf/domain-modeling-made-functional/) based on the [Tagless-Final](https://blog.rockthejvm.com/tagless-final/) style    and [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
+Let's build a hit counter using a [functional domain model](https://pragprog.com/titles/swdddf/domain-modeling-made-functional/) based on the [Tagless-Final](https://blog.rockthejvm.com/tagless-final/) style and [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
+
+This project is based on the post [F[unctional] Core, IO[mperative] Shell](https://earldouglas.com/clean.html).
 
 ## Layers
 
