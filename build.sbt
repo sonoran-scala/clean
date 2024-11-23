@@ -38,7 +38,7 @@ lazy val l3_drivers = project
 lazy val l2_use_cases = project
   .in(file("modules/l2-use-cases"))
   .settings(
-    libraryDependencies += "org.typelevel" %% "cats-effect" % "3.5.5"
+    libraryDependencies += "org.typelevel" %% "cats-effect" % "3.5.6"
   )
   .dependsOn(l1_domain)
 
