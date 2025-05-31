@@ -22,7 +22,7 @@ lazy val l4_runners = project
     libraryDependencies += "org.http4s" %% "http4s-ember-client" % "1.0.0-M44",
     libraryDependencies += "org.http4s" %% "http4s-ember-server" % "1.0.0-M44",
     libraryDependencies += "org.http4s" %% "http4s-dsl" % "1.0.0-M44",
-    libraryDependencies += "org.typelevel" %% "log4cats-slf4j" % "2.7.0",
+    libraryDependencies += "org.typelevel" %% "log4cats-slf4j" % "2.7.1",
     libraryDependencies += "org.http4s" %% "http4s-circe" % "1.0.0-M44"
   )
   .dependsOn(l3_drivers, l2_use_cases, l1_domain)
