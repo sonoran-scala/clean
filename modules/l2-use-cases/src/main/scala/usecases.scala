@@ -9,7 +9,7 @@ trait Counter[F[_]]:
 
   def counter: domain.operations.Counter[F]
 
-  def incrementAndGet(using M: Monad[F]): F[Count] =
+  final def incrementAndGet(using M: Monad[F]): F[Count] =
     for
       _ <- counter.increment
       c <- counter.get
