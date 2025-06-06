@@ -1,13 +1,12 @@
 package drivers.db
 
 import cats.effect.IO
-import domain.entities.Count
 
 import java.sql.Connection
 import java.sql.DriverManager
 import scala.util.chaining.scalaUtilChainingOps
 
-class DbSuite extends munit.CatsEffectSuite:
+class DbSuite extends drivers.TestSuite:
 
   given tx: Transactor[IO] with
 
@@ -26,15 +25,6 @@ class DbSuite extends munit.CatsEffectSuite:
             c.rollback()
             IO.raiseError(e)
 
-  test("example test that succeeds"):
-
-    for
-      _ <- drivers.db.init
-      svc = drivers.db.counter[IO]
-      c1 <- svc.incrementAndGet
-      c2 <- svc.incrementAndGet
-      c3 <- svc.incrementAndGet
-    yield
-      assertEquals(c1, Count(1))
-      assertEquals(c2, Count(2))
-      assertEquals(c3, Count(3))
+  override val counter =
+    for _ <- drivers.db.init
+    yield drivers.db.counter[IO]
