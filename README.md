@@ -2,6 +2,35 @@ Let's build a hit counter using a [functional domain model](https://pragprog.com
 
 This project is based on the post [F[unctional] Core, IO[mperative] Shell](https://earldouglas.com/clean.html).
 
+## Usage
+
+### Running the tests
+
+```
+$ sbt test
+drivers.mem.MemSuite:
+  + example test that succeeds 0.07s
+drivers.db.DbSuite:
+  + example test that succeeds 0.06s
+[info] Passed: Total 2, Failed 0, Errors 0, Passed 2
+```
+
+### Running the HTTP server
+
+```
+$ sbt l4_runners/run
+[info] running (fork) http.Main 
+```
+
+```
+$ curl localhost:8080/count
+1
+$ curl localhost:8080/count
+2
+$ curl localhost:8080/count
+3
+```
+
 ## Layers
 
 The domain is the lowest layer. Each additional layer may access any of the layers beneath it.
