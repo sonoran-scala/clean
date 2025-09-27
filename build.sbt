@@ -30,7 +30,7 @@ lazy val l4_runners = project
 lazy val l3_drivers = project
   .in(file("modules/l3-drivers"))
   .settings(
-    libraryDependencies += "com.h2database" % "h2" % "2.3.232",
+    libraryDependencies += "com.h2database" % "h2" % "2.4.240",
     libraryDependencies += "org.typelevel" %% "munit-cats-effect" % "2.1.0" % Test
   )
   .dependsOn(l2_use_cases, l1_domain)
