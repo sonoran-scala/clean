@@ -1,4 +1,4 @@
-ThisBuild / scalaVersion := "3.7.3"
+ThisBuild / scalaVersion := "3.7.4"
 
 ThisBuild / Compile / run / fork := true
 
